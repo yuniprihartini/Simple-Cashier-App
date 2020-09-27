@@ -21,6 +21,7 @@ class App extends Component {
   };
 
   showInfo = () => {
+    let initialPrice = 0
     if (this.state.selectedOption !== null) {
       return (
         <div>
@@ -30,17 +31,22 @@ class App extends Component {
         </div>
       )
     } else {
-      return null
+      return (
+        <div>
+          <NumberFormat value={initialPrice} displayType={'text'} thousandSeparator={true} prefix={'Rp'}/>
+        </div>
+      )
     }
   }
 
   render() {
     const { selectedOption } = this.state;
+    const selectProduct = 'Product Name'
 
     return (
       <div className="App">
         <div className="Select">
-          <Select value={selectedOption} onChange={this.handleChange} options={product} />
+          <Select value={selectedOption} onChange={this.handleChange} options={product} placeholder={selectProduct}/>
         </div>
         <div className="Price">
           {this.showInfo()}
