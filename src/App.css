@@ -13,10 +13,28 @@
 
 .Price {
   width: 200px;
+  height: 24px;
   padding: 6px 10px;
-  border-color: hsl(0, 0%, 80%);
+  border-color: #CCCCCC;
   border-radius: 4px;
   border-style: solid;
   border-width: 1px;
   cursor: not-allowed;
+}
+
+label {
+  color: #808080;
+  /* color: #2f89ff; */
+}
+
+@media screen and (max-width: 467px) {
+  .App {
+    flex-direction: column;
+  }
+  .Select {
+    width: 300px;
+  }
+  .Price {
+    width: 278px;
+  }
 }
