@@ -4,7 +4,7 @@ import NumberFormat from 'react-number-format';
 
 import { product } from './data/Product';
 
-import './App.css';
+import './assets/App.css';
 
 class App extends Component {
   state = {
