@@ -34,9 +34,9 @@ const Price = (props) => {
     }
 
     return (
-        <div>
+        <div className="Price">
             <label>Price</label>
-            <div className="Price">
+            <div className="Get-Price">
                 {getPrice()}
             </div>
         </div>
