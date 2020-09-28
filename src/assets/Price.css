@@ -1,4 +1,8 @@
 .Price {
+    margin-right: 10px;
+}
+
+.Get-Price {
     width: 200px;
     height: 24px;
     padding: 6px 10px;
@@ -10,7 +14,7 @@
 }
 
 @media screen and (max-width: 467px) {
-    .Price {
+    .Get-Price {
         width: 278px;
     }
 }
