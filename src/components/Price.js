@@ -5,7 +5,6 @@ import '../assets/Price.css'
 
 const Price = (props) => {
     const selectedOption = props.selectedOption
-    const productHandleChange = props.productHandleChange
 
     const getPrice = () => {
         const initialPrice = 0
