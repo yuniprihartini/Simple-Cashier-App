@@ -23,8 +23,7 @@ class ProductOrder extends Component {
                     selectedOption={selectedOption}
                     productHandleChange={this.productHandleChange} />
                 <Price
-                    selectedOption={selectedOption}
-                    productHandleChange={this.productHandleChange} />
+                    selectedOption={selectedOption} />
             </div>
         );
     }
