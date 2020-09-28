@@ -1,0 +1,16 @@
+.Price {
+    width: 200px;
+    height: 24px;
+    padding: 6px 10px;
+    border-color: #CCCCCC;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: not-allowed;
+}
+
+@media screen and (max-width: 467px) {
+    .Price {
+        width: 278px;
+    }
+}

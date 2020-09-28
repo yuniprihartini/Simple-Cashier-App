@@ -1,0 +1,14 @@
+.Select {
+    width: 200px;
+    margin-right: 10px;
+}
+
+label {
+    color: #808080;
+}
+
+@media screen and (max-width: 467px) {
+    .Select {
+        width: 300px;
+    }
+}
