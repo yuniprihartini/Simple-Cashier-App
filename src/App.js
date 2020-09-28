@@ -30,7 +30,6 @@ class App extends Component {
         changeLabelColor[i].style.color = "black";
       }
       changeBorderPrice.style.borderColor = "#2f89ff"
-
       return (
         <div>
           {/* <p>Product : {this.state.selectedOption.label}</p>
@@ -51,7 +50,11 @@ class App extends Component {
     control: (provided, state) => ({
       ...provided,
       borderColor: value ? "#2f89ff" : "#CCCCCC"
-    })
+    }),
+    singleValue: (provided, state) => {
+      const color = state ? "black" : "#CCCCCC"
+      return { ...provided, color };
+    }
   });
   
   render() {
