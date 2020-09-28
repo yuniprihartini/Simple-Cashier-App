@@ -4,7 +4,7 @@
 
 .Get-Price {
     width: 200px;
-    height: 24px;
+    height: 38px;
     padding: 6px 10px;
     border-color: #CCCCCC;
     border-radius: 4px;
@@ -15,6 +15,6 @@
 
 @media screen and (max-width: 467px) {
     .Get-Price {
-        width: 278px;
+        width: 300px;
     }
 }
