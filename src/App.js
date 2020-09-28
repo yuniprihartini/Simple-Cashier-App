@@ -21,8 +21,16 @@ class App extends Component {
   };
 
   showInfo = () => {
-    let initialPrice = 0
+    const initialPrice = 0
+    const changeLabelColor = document.querySelectorAll('label')
+    const changeBorderPrice = document.getElementById('Color-Price')
+
     if (this.state.selectedOption !== null) {
+      for (let i = 0; i < changeLabelColor.length; i++) {
+        changeLabelColor[i].style.color = "black";
+      }
+      changeBorderPrice.style.borderColor = "#2f89ff"
+
       return (
         <div>
           {/* <p>Product : {this.state.selectedOption.label}</p>
@@ -33,12 +41,19 @@ class App extends Component {
     } else {
       return (
         <div>
-          <NumberFormat value={initialPrice} displayType={'text'} thousandSeparator={true} prefix={'Rp'}/>
+          <NumberFormat value={initialPrice} displayType={'text'} thousandSeparator={true} prefix={'Rp'} />
         </div>
       )
     }
   }
 
+  customStyles = value => ({
+    control: (provided, state) => ({
+      ...provided,
+      borderColor: value ? "#2f89ff" : "#CCCCCC"
+    })
+  });
+  
   render() {
     const { selectedOption } = this.state;
     const selectProduct = 'Product Name'
@@ -46,10 +61,14 @@ class App extends Component {
     return (
       <div className="App">
         <div className="Select">
-          <Select value={selectedOption} onChange={this.handleChange} options={product} placeholder={selectProduct}/>
+          <label>Product</label>
+          <Select value={selectedOption} onChange={this.handleChange} options={product} placeholder={selectProduct} styles={this.customStyles(selectedOption)}/>
         </div>
-        <div className="Price">
-          {this.showInfo()}
+        <div >
+          <label>Price</label>
+          <div id="Color-Price" className="Price">
+            {this.showInfo()}
+          </div>
         </div>
       </div>
     );
