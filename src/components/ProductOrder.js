@@ -4,12 +4,14 @@ import '../assets/ProductOrder.css'
 import Price from './Price';
 import ProductSelected from './ProductSelected';
 import Quantity from './Quantity';
+import Total from './Total';
 
 class ProductOrder extends Component {
     // state for selectedOption 
     state = {
         selectedOption: null,
         quantity: 0,
+        total: 0,
         disable: true
     }
 
@@ -32,7 +34,7 @@ class ProductOrder extends Component {
 
     render() {
         // this.state.selectedOption
-        const { selectedOption, quantity, disable } = this.state
+        const { selectedOption, quantity, total, disable } = this.state
         return (
             <div className="Product-Order">
                 <ProductSelected
@@ -45,6 +47,10 @@ class ProductOrder extends Component {
                     addProductQuantity={this.addProductQuantity}
                     reduceProductQuantity={this.reduceProductQuantity}
                     disable={disable} />
+                <Total
+                    selectedOption={selectedOption}
+                    quantity={quantity}
+                    total={total} />
             </div>
         );
     }
