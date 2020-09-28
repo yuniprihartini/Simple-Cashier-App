@@ -5,8 +5,8 @@
     font-size: 16px;
 }
 
-@media screen and (max-width: 705px) {
+@media screen and (max-width: 768px) {
     .Product-Order {
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 }
