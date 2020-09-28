@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 
-import '../assets/ProductOrder.css'
 import Price from './Price';
 import ProductSelected from './ProductSelected';
 import Quantity from './Quantity';
 import Total from './Total';
+
+import '../assets/ProductOrder.css'
 
 class ProductOrder extends Component {
     // state for selectedOption 
