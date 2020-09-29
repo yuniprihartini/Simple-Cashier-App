@@ -1,6 +1,8 @@
 import React from 'react';
 import NumberFormat from 'react-number-format';
 
+import '../assets/Total.css'
+
 const Total = (props) => {
     const selectedOption = props.selectedOption
     const quantity = props.quantity
@@ -33,8 +35,11 @@ const Total = (props) => {
         }
     }
     return (
-        <div>
-            {getTotal()}
+        <div className="Total">
+            <label>Total</label>
+            <div className="Get-Total">
+                {getTotal()}
+            </div>
         </div>
     );
 };
