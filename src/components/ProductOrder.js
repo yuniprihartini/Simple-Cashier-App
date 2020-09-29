@@ -8,7 +8,6 @@ import Total from './Total';
 import '../assets/ProductOrder.css'
 
 class ProductOrder extends Component {
-    // state for selectedOption 
     state = {
         selectedOption: null,
         quantity: 0,
@@ -21,9 +20,12 @@ class ProductOrder extends Component {
         this.setState({ selectedOption })
     }
 
+    // function to add quantity
     addProductQuantity = () => {
         this.setState({ quantity: this.state.quantity + 1, disable: false })
     }
+    
+    // function to reduce quantity
     reduceProductQuantity = () => {
         let quantity = this.state.quantity
         if (quantity <= 0) {
@@ -34,7 +36,6 @@ class ProductOrder extends Component {
     }
 
     render() {
-        // this.state.selectedOption
         const { selectedOption, quantity, total, disable } = this.state
         return (
             <div className="Product-Order">
