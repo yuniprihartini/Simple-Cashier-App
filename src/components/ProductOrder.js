@@ -10,9 +10,11 @@ import '../assets/ProductOrder.css'
 
 class ProductOrder extends Component {
     state = {
-        selectedOption: null,
-        quantity: 0,
-        total: 0,
+        data: [{
+            selectedOption: null,
+            quantity: 0,
+            total: 0,
+        }],
         disable: true
     }
 
