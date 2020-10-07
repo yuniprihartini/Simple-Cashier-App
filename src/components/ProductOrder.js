@@ -5,6 +5,7 @@ import ProductSelected from './ProductSelected';
 import Quantity from './Quantity';
 import Total from './Total';
 
+import 'bootstrap/dist/css/bootstrap.min.css'
 import '../assets/ProductOrder.css'
 
 class ProductOrder extends Component {
